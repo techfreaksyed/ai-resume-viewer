@@ -1,0 +1,50 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-tabs">
+	<li [ngbNavItem]="1">
+    <button ngbNavLink>Upload file</button>
+    <ng-template ngbNavContent>
+      <div class="card p-4 text-center border border-success-subtle shadow-sm">
+        <p>Drop your resume here or choose a file. <br />PDF & DOCX only. Max 2MB file size.</p>
+
+        <!-- Hidden File Input -->
+        <input
+          type="file"
+          id="resumeInput"
+          (change)="onFileSelected($event)"
+          accept=".pdf,.doc,.docx,.txt"
+          hidden
+        />
+
+        <!-- Custom Upload Button -->
+        <button class="btn btn-success fw-bold px-4 py-2" (click)="triggerFileInput()">
+          <i class="bi bi-upload me-2"></i> Upload Your Resume
+        </button>
+
+        <!-- Privacy Notice -->
+        <div class="mt-3 text-muted small">
+          <i class="bi bi-lock-fill me-1"></i> Privacy guaranteed
+        </div>
+      </div>
+    </ng-template>
+  </li>
+	<li [ngbNavItem]="2">
+    <button ngbNavLink>Paste text</button>
+    <ng-template ngbNavContent>
+      <textarea
+        class="form-control"
+        rows="6"
+        placeholder="Paste your resume text here..."
+        [(ngModel)]="resumeText"
+      ></textarea>
+    </ng-template>
+  </li>
+	<li [ngbNavItem]="3">
+    <button ngbNavLink>Google Drive</button>
+    <ng-template ngbNavContent>
+      <p>Google Drive integration coming soon...</p>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
