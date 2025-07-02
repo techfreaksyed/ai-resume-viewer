@@ -1,59 +1,84 @@
-# ResumeReviewer
+# AI Resume Reviewer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+AI Resume Reviewer is a web application that leverages artificial intelligence to analyze and provide feedback on resumes. Built with Angular, it helps users improve their resumes by highlighting strengths, identifying weaknesses, and offering actionable suggestions for enhancement.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- **AI-Powered Analysis:** Automatically reviews uploaded resumes and provides detailed feedback.
+- **Actionable Suggestions:** Recommends improvements for formatting, content, and keywords.
+- **User-Friendly Interface:** Simple and intuitive UI for uploading and reviewing resumes.
+- **Real-Time Feedback:** Instantly see suggestions and make edits.
+
+## Tech Stack
+
+- **Frontend:** [Angular](https://angular.dev/) (TypeScript)
+- **Backend:** Node.js (Express) 
+- **AI Integration:** Gemini AI
+- **File Handling:** PDF and DOCX parsing libraries
+- **Testing:** Jasmine, Karma
+- **Build Tools:** Angular CLI, npm
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [Angular CLI](https://angular.dev/tools/cli)
+
+### Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/your-username/ai-resume-reviewer.git
+cd ai-resume-reviewer
+npm install
+```
+
+### Running the Application
+
+Start the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser and navigate to [http://localhost:4200/](http://localhost:4200/).
 
-## Code scaffolding
+## Usage
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Upload your resume in PDF or DOCX format.
+2. The AI analyzes your resume and displays feedback.
+3. Review suggestions and update your resume accordingly.
 
-```bash
-ng generate component component-name
-```
+## Testing
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Run unit tests with:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Building for Production
 
-For end-to-end (e2e) testing, run:
+To build the project for production:
 
 ```bash
-ng e2e
+ng build --configuration production
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Contributing
 
-## Additional Resources
+Contributions are welcome! Please open issues or submit pull requests for improvements and bug fixes.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- [Angular](https://angular.dev/)
+- [OpenAI](https://openai.com/)
+- Community contributors
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
