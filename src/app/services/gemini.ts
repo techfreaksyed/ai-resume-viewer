@@ -56,4 +56,5 @@ export class Gemini {
     return response.text;
   }
 
+
 }

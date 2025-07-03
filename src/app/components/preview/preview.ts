@@ -24,7 +24,7 @@ export class Preview extends BaseComponent {
     } else {
       console.log('get stored file:', this.resumeService.getStoredFile());
       // this.resumeService.setResultText('xyz')
-      //  this.router.navigate(['/results']);
+      // this.router.navigate(['/results']);
       this.sendFileAndPrompt("Make a summary of the resume and provide feedback on how to improve it.");
     }
   }
