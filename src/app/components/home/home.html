@@ -1,4 +1,9 @@
-@if(fileUploadCount < 3) { <ng-container>
+@if(fileUploadCount < 3) { 
+<div class="alert alert-info mb-3">
+  <i class="bi bi-info-circle me-2"></i>
+  Note: We are currently working on processing Word documents (.doc, .docx). Support will improve soon!
+</div>
+<ng-container>
   <div class="card p-4 text-center border border-success-subtle shadow-sm">
     <p>Drop your resume here or choose a file. <br />PDF & DOCX only. Max 2MB file size.</p>
 
@@ -15,12 +20,12 @@
       <i class="bi bi-lock-fill me-1"></i> Privacy guaranteed
     </div>
   </div>
-  </ng-container>
-  }@else {
-  <div class="alert alert-warning text-center">
-    <i class="bi bi-exclamation-triangle-fill me-2"></i>
-    <span>
-      You have reached your daily limit for resume uploads. Please try again tomorrow.
-    </span>
-  </div>
-  }
+</ng-container>
+}@else {
+<div class="alert alert-warning text-center">
+  <i class="bi bi-exclamation-triangle-fill me-2"></i>
+  <span>
+    You have reached your daily limit for resume uploads. Please try again tomorrow.
+  </span>
+</div>
+}

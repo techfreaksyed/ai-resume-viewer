@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { ResumeFileInfo, SharedStateService } from '../../services/shared-state';
+import { Router } from '@angular/router';
 import { NgxDocViewerModule } from 'ngx-doc-viewer';
 import { Gemini } from '../../services/gemini';
+import { SharedStateService } from '../../services/shared-state';
 import { BaseComponent } from '../../shared/baseComponent';
-import { Router } from '@angular/router';
+import { Appwrite } from '../../services/appwrite';
 
 @Component({
   selector: 'app-preview',
@@ -14,6 +15,7 @@ import { Router } from '@angular/router';
 export class Preview extends BaseComponent {
   resumeService = inject(SharedStateService)
   geminiService = inject(Gemini)
+  appwriteService = inject(Appwrite) // Assuming you have an Appwrite service for file uploads
   router = inject(Router)
 
   resumeFile = this.resumeService.resumeFile
@@ -23,9 +25,9 @@ export class Preview extends BaseComponent {
       this.resumeService.setResumeFile(null);
     } else {
       console.log('get stored file:', this.resumeService.getStoredFile());
-      // this.resumeService.setResultText('xyz')
-      // this.router.navigate(['/results']);
-      this.sendFileAndPrompt("Make a summary of the resume and provide feedback on how to improve it.");
+      this.resumeService.setResultText('xyz')
+      this.router.navigate(['/results']);
+      // this.sendFileAndPrompt("Make a summary of the resume and provide feedback on how to improve it.");
     }
   }
 

@@ -2,7 +2,7 @@
   <p style="font-size: 20px; color: white">Loading...</p>
 </ngx-spinner>
 <app-header></app-header>
-@if(resumeFile()){
+<!-- @if(resumeFile()){
 @if(resumeService.resultText()){
 <app-results></app-results>
 } @else {
@@ -14,4 +14,7 @@
 <div class="home-container">
   <app-home></app-home>
 </div>
-}
+} -->
+<div class="home-container">
+  <router-outlet></router-outlet>
+</div>

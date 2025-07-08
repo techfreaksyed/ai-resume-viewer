@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Results } from './components/results/results';
 import { Home } from './components/home/home';
+import { Preview } from './components/preview/preview';
 
 export const routes: Routes = [
     {
@@ -13,12 +14,16 @@ export const routes: Routes = [
         component: Home
     },
     {
+        path: 'preview',
+        component: Preview
+    },
+    {
         path: 'results',
         component: Results
     },
-    {
-        path: '**',
-        redirectTo: ''
-    }
+    // {
+    //     path: '**',
+    //     redirectTo: ''
+    // }
 ];
 // All routes above are already configured for lazy loading using loadChildren.
