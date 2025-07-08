@@ -56,6 +56,7 @@ export class Home extends BaseComponent implements OnInit {
 
       this.appwriteService.uploadFile(file).then(
         (res: any) => {
+          this.utility.updateLoader(false);
           this.utility.showSuccess('File uploaded successfully!', 'Success');
           this.fileUrl = `https://cloud.appwrite.io/v1/storage/buckets/${res.bucketId}/files/${res.$id}/view?project=YOUR_PROJECT_ID`;
           this.resumeService.setResumeFile({
@@ -70,11 +71,10 @@ export class Home extends BaseComponent implements OnInit {
           this.router.navigate(['/preview']);
         },
         (err) => {
-          console.error('Upload error:', err);
+          this.utility.updateLoader(false);
+          this.utility.showError('Failed to upload file. Please try again.', 'Error');
         }
       );
-
-      this.utility.updateLoader(false);
 
 
       // Example: send formData to a service or API endpoint

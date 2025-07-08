@@ -1,5 +1,5 @@
 export const environment = {
-  production: false,
+  production: true,
   geminiApiKey: 'AIzaSyAlJuUjIFTIc-QIt7lANlECvEFWXmUOQV4', // Replace with your actual key
   appwriteEndpoint: 'https://fra.cloud.appwrite.io/v1',
   appwriteProjectId: '686b7cad00104e2ddfad',
