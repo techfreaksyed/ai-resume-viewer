@@ -11,6 +11,7 @@ export class Http {
 
   // --- POST Request ---
   uploadFile(url: string, data: any): Observable<any> {
+    // Set headers if needed
     return this.http.post<any>(url, data).pipe(
       catchError(this.handleError)
     );
